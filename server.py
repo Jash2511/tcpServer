@@ -20,9 +20,9 @@ def handle_client(client , addr) :
     print(f"[NEW CONNECTION] {addr} connected ")
 
     message = client.recv(1024).decode('utf-8')
-    print(f"[ {addr} ] says : {message} ")
+    print(f" {addr}  says : {message} ")
 
-    clinet.send("Thanks! message recived").encode('utf-8')
+    client.send("Thanks! message recived".encode('utf-8'))
     
     client.close()
     print(f"[CONNECTION CLOSED] {addr} disconnected.")
